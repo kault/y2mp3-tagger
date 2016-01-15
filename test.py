@@ -8,8 +8,8 @@ def safeGet(url):
 		return json.load(urllib2.urlopen(url))
 	except urllib2.URLError, e:
 		if hasattr(e, 'reason'):
-			print 'We failed to reach a server'
-			print 'Reason: ', e.reason
+			print "We failed to reach a server"
+			print "Reason: ", e.reason
 		elif hasattr(e, 'code'):
 			print "The server couldn\'t fulfill the request."
 			print "Error code: ", e.code
@@ -23,4 +23,5 @@ def getDownloads(query, params={}):
 	print url
 	return safeGet(url)
 
-print type(getDownloads('https://www.youtube.com/watch?v=dVUT2LoYoT8'))
+yt_json = getDownloads("https://www.youtube.com/watch?v=F_Z_B7UQ5bU")
+
