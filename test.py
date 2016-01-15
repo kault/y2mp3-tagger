@@ -27,4 +27,6 @@ def getDownloads(query, params={}):
 yt_json = getDownloads("https://www.youtube.com/watch?v=F_Z_B7UQ5bU")
 yt_title = yt_json["title"]
 
-p.get_artist_and_song(yt_title)
+(artist, title) print artist
+= p.get_artist_and_song(yt_title)
+print title
