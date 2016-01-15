@@ -1,4 +1,6 @@
-import urllib, urllib2, json
+import urllib, urllib2, json, re
+
+regex_pat = '()()'
 
 def pretty(obj):
 	return json.dumps(obj, sort_keys=True, indent=2)
@@ -24,4 +26,5 @@ def getDownloads(query, params={}):
 	return safeGet(url)
 
 yt_json = getDownloads("https://www.youtube.com/watch?v=F_Z_B7UQ5bU")
+yt_title = yt_json["title"]
 
